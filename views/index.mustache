@@ -8,6 +8,7 @@
   <body>
     <nav>
       <a href="/addNew">Add New</a>
+      <a href="/">Home</a>
     </nav>
     <h1>Record Collection</h1>
     {{#vinyl}}
@@ -22,15 +23,9 @@
 
       <div class="record_prop">
         <span>The record is
-          {{#properties}}
-            {{size}}
-          {{/properties}} " and runs at
-          {{#properties}}
-            {{speed}}
-          {{/properties}} rpm.  This is the
-          {{#properties}}
-            {{pressing}}
-          {{/properties}} pressing.</span>
+            {{properties.size}} " and runs at
+            {{properties.speed}} rpm.  This is the
+            {{properties.pressing}} pressing.</span>
       </div>
 
       <div class="genre">

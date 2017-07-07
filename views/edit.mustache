@@ -5,9 +5,13 @@
     <title></title>
   </head>
   <body>
+    <nav>
+      <a href="/addNew">Add New</a>
+      <a href="/">Home</a>
+    </nav>
     <h1>Add to the Collection!</h1>
     {{#vinyl}}
-    <form class="" action="/addNew" method="post">
+    <form class="" action="/{{_id}}/update" method="post">
       <div class="">
         <label for="band">Band Name:</label>
         <input type="text" name="band" value="{{band}}">
@@ -28,7 +32,7 @@
       </div>
       <div class="">
         <label for="label">Label:</label>
-        <input type="text" name="label" value="">
+        <input type="text" name="label" value="{{label}}">
 
       </div>
       <div class="">
@@ -38,19 +42,19 @@
       </div>
       <div class="">
         <label for="speed">Vinyl Speed:</label>
-        <input type="text" name="speed" value="{{speed}}">
+        <input type="text" name="speed" value="{{properties.speed}}">
       </div>
       <div class="">
         <label for="size">Record Size:</label>
-        <input type="text" name="size" value="{{size}}">
+        <input type="text" name="size" value="{{properties.size}}">
       </div>
       <div class="">
         <label for="pressing">Pressing:</label>
-        <input type="text" name="pressing" value="{{pressing}}">
+        <input type="text" name="pressing" value="{{properties.pressing}}">
       </div>
 
+      <button type="submit" name="button" value"{{_id}}">Thanks!</button>
       {{/vinyl}}
-      <button type="submit" name="button">Thanks!</button>
 
 
 

@@ -8,11 +8,11 @@ const vinylSchema = new mongoose.Schema({
   year: {type: Number},
   label: {type: String},
   genreTag: [String],
-  properties: [{
+  properties: {
     speed: {type: Number},
     size: {type: Number},
     pressing: {type: Number},
-  }]
+  }
 })
 
 const Vinyl = mongoose.model('Vinyl', vinylSchema);
