@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/addNew">Add New</a>
+    </nav>
+    <h1>Record Collection</h1>
+    {{#vinyl}}
+    <div class="record_wrapper">
+      <div class="albumArt">
+        <img src="{{albumCover}}" alt="">
+      </div>
+      <div class="title">
+        <span>{{albumTitle}} - By: {{band}}</span>
+        <span>Released in {{year}} on {{label}}</span>
+      </div>
+
+      <div class="record_prop">
+        <span>The record is
+          {{#properties}}
+            {{size}}
+          {{/properties}} " and runs at
+          {{#properties}}
+            {{speed}}
+          {{/properties}} rpm.  This is the
+          {{#properties}}
+            {{pressing}}
+          {{/properties}} pressing.</span>
+      </div>
+
+      <div class="genre">
+        <p>Associated genre's</p>
+        <span>{{#genreTag}}{{.}}{{/genreTag}}</span>
+      </div>
+      <a href="/{{id}}/edit">Edit</a>
+
+      <form class="" action="/{{_id}}/deletePost" method="post">
+        <button type="submit" name="button">Delete</button>
+      </form>
+    </div>
+    {{/vinyl}}
+  </body>
+</html>

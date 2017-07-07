@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Add to the Collection!</h1>
+    {{#vinyl}}
+    <form class="" action="/addNew" method="post">
+      <div class="">
+        <label for="band">Band Name:</label>
+        <input type="text" name="band" value="{{band}}">
+      </div>
+      <div class="">
+        <label for="albumTitle">Album Title:</label>
+        <input type="text" name="albumTitle" value="{{albumTitle}}">
+      </div>
+      <div class="">
+        <label for="albumArt">Album Art URL:</label>
+        <input type="text" name="albumCover" value="{{albumCover}}">
+
+      </div>
+      <div class="">
+        <label for="year">Release Year</label>
+        <input type="text" name="year" value="{{year}}">
+
+      </div>
+      <div class="">
+        <label for="label">Label:</label>
+        <input type="text" name="label" value="">
+
+      </div>
+      <div class="">
+        <label for="genreTag">Genre Tags:</label>
+        <input type="text" name="genreTag" value="{{genreTag}}">
+
+      </div>
+      <div class="">
+        <label for="speed">Vinyl Speed:</label>
+        <input type="text" name="speed" value="{{speed}}">
+      </div>
+      <div class="">
+        <label for="size">Record Size:</label>
+        <input type="text" name="size" value="{{size}}">
+      </div>
+      <div class="">
+        <label for="pressing">Pressing:</label>
+        <input type="text" name="pressing" value="{{pressing}}">
+      </div>
+
+      {{/vinyl}}
+      <button type="submit" name="button">Thanks!</button>
+
+
+
+    </form>
+  </body>
+</html>
